@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "116b4d8a-38bc-40c9-ac32-80bf6c055d2b",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17878303"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+201011731954",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task.test/api/user/login",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "medo elfert",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+201011731954",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task.test/api/user/register",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test"
+					],
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGFzay50ZXN0L2FwaS91c2VyL2xvZ2luIiwiaWF0IjoxNjU1OTgwMjM3LCJleHAiOjE2NTU5ODM4MzcsIm5iZiI6MTY1NTk4MDIzNywianRpIjoiZ0VNQU9vbU92Y1lDNHpBNSIsInN1YiI6IjEwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Xcjre-HbTZdvTu9aU2sTj7mTesIAs4FVVwWzXJyRV1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://task.test/api/user/logout",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test"
+					],
+					"path": [
+						"api",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user verification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pin_code",
+							"value": "7214",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+201011731954",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://task.test/api/user/verify",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test"
+					],
+					"path": [
+						"api",
+						"user",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGFzay50ZXN0L2FwaS91c2VyL2xvZ2luIiwiaWF0IjoxNjU2MDk2NjQ0LCJleHAiOjE2NTYxMDAyNDQsIm5iZiI6MTY1NjA5NjY0NCwianRpIjoiTFllZFI3MjNTOVlnelBQNSIsInN1YiI6IjkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.UVzIMcu6NLgyCi836HC2WfZCAh7XsjUnCDULJmHRzP0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://task.test/api/user/profile",
+					"protocol": "http",
+					"host": [
+						"task",
+						"test"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
